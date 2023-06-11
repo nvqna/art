@@ -15,12 +15,18 @@ Check:
 Invoke-AtomicTest All -ShowDetailsBrief
 
 # Configure
-## Logging location
+
+notepad $profile
+
+
+## Profile
 
 Import-Module "C:\AtomicRedTeam\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
 
 $PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\AtomicRedTeam\invoke-atomicredteam\atomics"}
 
 $PSDefaultParameterValues = @{"Invoke-AtomicTest:ExecutionLogPath"="C:\Users\<user>\Documents\AtomicLog.csv"}
+
+## stat
 
 . $profile
