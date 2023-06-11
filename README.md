@@ -9,13 +9,18 @@ IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/mas
 
 ## Atomics
 Install-AtomicRedTeam -getAtomics -Force -InstallPath "C:\AtomicRedTeam"
+
 Check:
+
 Invoke-AtomicTest All -ShowDetailsBrief
 
 # Configure
 ## Logging location
+
 Import-Module "C:\AtomicRedTeam\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
+
 $PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\AtomicRedTeam\invoke-atomicredteam\atomics"}
+
 $PSDefaultParameterValues = @{"Invoke-AtomicTest:ExecutionLogPath"="C:\Users\<user>\Documents\AtomicLog.csv"}
 
 . $profile
